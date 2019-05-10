@@ -14,4 +14,6 @@ sed 's/;''$/;\\N/' data6.csv > data7.csv
 sed 's/,/./g' data7.csv > data8.csv
 #Remplazar ; por ,
 sed 's/;/,/g' data8.csv > data9.csv
-cat data9.csv
+#Extraer las lineas sin nulos
+sed '/\\N/d' data9.csv > data10.csv
+cat data10.csv
